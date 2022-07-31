@@ -6,7 +6,9 @@ Recommended using python versions 3.10+ <br />
 You can install python's latest version for Windows on [python.org](https://python.org/downloads/windows/) <br />
 If you are on Linux you know how to use python, I guess <br />
 
-The instalation with git: <br />
+Install [Java](https://www.java.com/ru/download/) for browsermob-proxy work<br />
+
+Script instalation with git: <br />
 
 ```bash
 1. $ git clone https://github.com/fascot/Media-Download-Tool/
