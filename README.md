@@ -47,16 +47,16 @@ Base commands, wich heve to work with any type of url: <br />
 ```bash
 | Tool           | Url | Command          | Argument                        | Description                                   |
 +----------------+-----+------------------+---------------------------------+-----------------------------------------------+
-| python ums.py |     | --help           | all | youtube | unknown_site... | Returns documentation for current url type     |
-| python ums.py | url | --info           |                                 | Returns information about page                 |
-| python ums.py | url | -n | -name       | custom_name                     | Changes name of the output media file          |
-| python ums.py | url | -p | -path       | custom_path                     | Changes path of the output media file          |
+| python mdt.py |     | --help           | all | youtube | unknown_site... | Returns documentation for current url type     |
+| python mdt.py | url | --info           |                                 | Returns information about page                 |
+| python mdt.py | url | -n | -name       | custom_name                     | Changes name of the output media file          |
+| python mdt.py | url | -p | -path       | custom_path                     | Changes path of the output media file          |
 ```
 
 Commands `-o` and `-r` work only with youtube and pornhub links:
 ```bash
-| python ums.py | url | -o | -option     | video_only | audio_only        | Deletes audio or video from output media file  |
-| python ums.py | url | -r | -resolution | 144p | 240p | .... | 2160p     | Changes resolution of the output media file    |
+| python mdt.py | url | -o | -option     | video_only | audio_only        | Deletes audio or video from output media file  |
+| python mdt.py | url | -r | -resolution | 144p | 240p | .... | 2160p     | Changes resolution of the output media file    |
 ```
 
 BY DEFAULT:

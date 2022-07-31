@@ -3,4 +3,5 @@ beautifulsoup4
 pornhub-api
 youtube-dl
 selenium
+pytube
 browsermob-proxy
