@@ -5,6 +5,7 @@ from pathlib import Path
 from os.path import dirname, abspath
 from sys import stdout
 from .functions.name_correct import name_correct
+import platform
 
 
 def pornhub_check(url):
@@ -121,7 +122,11 @@ def pornhub_downloader(url, opts):
     else:
         print("ERROR: Wrong pornhub link: maybe this link is not a video link, but channel or playlist and etc.")
     
-    clear = lambda : os.system('cls')
+    # clear func
+    if platform.system() == "Windows":
+        clear = lambda : os.system('cls')
+    else:
+        clear = lambda : os.system('clear')
     
     if video_only:
         cmd = f"ffmpeg -i {path}/output.mp4 -c:v copy -an {path}/{name}.mp4".replace('/', os.sep)

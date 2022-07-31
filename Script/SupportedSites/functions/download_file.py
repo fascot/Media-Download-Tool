@@ -4,6 +4,7 @@ import os
 from threading import Thread
 import time
 from pytube import Stream
+import platform
 
 def download_file(link, path, name):
     def animating_download(file_size_in_bytes: int, name: str, path: str):
@@ -23,9 +24,11 @@ def download_file(link, path, name):
         previous_downloaded_file_size_in_bytes = 0
         previous_frame = ''
 
-        # func clears console
-        clear = lambda: os.system('cls')
-        clear()
+        # clear func
+        if platform.system() == "Windows":
+            clear = lambda : os.system('cls')
+        else:
+            clear = lambda : os.system('clear')
 
         # animate download
         while True:
@@ -132,9 +135,11 @@ def download_file_from_stream(stream, path, name):
         previous_downloaded_file_size_in_bytes = 0
         previous_frame = ''
 
-        # func clears console
-        clear = lambda: os.system('cls')
-        clear()
+        # clear func
+        if platform.system() == "Windows":
+            clear = lambda : os.system('cls')
+        else:
+            clear = lambda : os.system('clear')
 
         # animate download
         print('animating download')

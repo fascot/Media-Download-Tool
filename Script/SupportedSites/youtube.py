@@ -4,6 +4,7 @@ from pathlib import Path
 from .functions.name_correct import name_correct
 from .functions.download_file import download_file_from_stream
 from sys import stdout
+import platform
 
 
 def youtube_check(url):
@@ -169,7 +170,10 @@ def youtube_downloader(url, opts):
                 continue
         
         # clear func
-        clear = lambda : os.system('cls')
+        if platform.system() == "Windows":
+            clear = lambda : os.system('cls')
+        else:
+            clear = lambda : os.system('clear')
 
         if audio_tag is None or video_only:
             if audio_only:

@@ -7,6 +7,7 @@ from selenium.webdriver.firefox.options import Options
 from .functions.name_correct import name_correct
 from .functions.download_file import download_file
 from sys import stdout
+import platform
 
 
 def newgrounds_check(url):
@@ -122,16 +123,27 @@ def newgrounds_downloader(url, opts):
 
         download_file(link, path, name)
 
+        # clear func
+        if platform.system() == "Windows":
+            clear = lambda : os.system('cls')
+        else:
+            clear = lambda : os.system('clear')
+
         if video_only:
             cmd = f"ffmpeg -i {path}/output.mp4 -c:v copy -an {path}/{name}.mp4".replace('/', os.sep)
             os.system(cmd)
             os.remove(f'{path}/output.mp4'.replace('/', os.sep))
+            clear()
         elif audio_only:
             cmd = f"ffmpeg -i {path}/output.mp4 -a:v copy -vn {path}/{name}.mp4".replace('/', os.sep)
             os.system(cmd)
             os.remove(f'{path}/output.mp4'.replace('/', os.sep))
+            clear()
         else:
             os.rename(f'{path}/output.mp4', f"{path}/{name}.mp4".replace('/', os.sep))
-
+            clear()
+        
+        stdout.write('Download complete!')
+        stdout.flush()
     else:
         print("ERROR: It's not a video link, maybe something else...")
