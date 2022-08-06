@@ -79,7 +79,7 @@ def pornhub_downloader(url, opts):
     resolutions = ['2160','1440','1080','720','480','360','240']
 
     if '/view_video.php?viewkey=' in url:
-        resolution = opts['resolution'][:-1]
+        resolution = opts['resolution']
         video_only = opts['video_only']
         audio_only = opts['audio_only']
         custom_path = opts['path']
@@ -91,6 +91,7 @@ def pornhub_downloader(url, opts):
             path = custom_path
 
         if resolution == 'best' or resolution in resolutions or resolution is None:
+            print('sus')
             if custom_name is None:
                 api = PornhubApi()
                 vid_id = url[url.index('=')+1:-1] + url[-1]
@@ -103,7 +104,7 @@ def pornhub_downloader(url, opts):
             if resolution == 'best' or resolution == '':
                 format = 'best'
             else:
-                format = f'best[height={resolution}]'
+                format = f'best[height={resolution[:-1]}]'
 
             try:
                 download_options = {'format': format,

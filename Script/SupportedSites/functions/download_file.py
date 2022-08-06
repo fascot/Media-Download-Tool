@@ -148,7 +148,10 @@ def download_file_from_stream(stream, path, name):
                 half_sec_counter = 0
             
             # get downloaded file size
-            downloaded_file_size_in_bytes = os.path.getsize(f'{path}/{name}'.replace('/', os.sep))
+            try:
+                downloaded_file_size_in_bytes = os.path.getsize(f'{path}/{name}'.replace('/', os.sep))
+            except:
+                break
 
             # define file size in B,KB,MB,GB
             if downloaded_file_size_in_bytes >= 1073741824:
