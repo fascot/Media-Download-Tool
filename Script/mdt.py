@@ -163,6 +163,8 @@ def input_processing():
         modules_info = json.load(fr)
         if set(modules_info['modules']) != set(modules):
 
+            global format_sites
+            global resolution_sites
             format_sites = []
             resolution_sites = []
             docs_by_module = modules_info["docs_by_module"]
