@@ -1,28 +1,4 @@
-{
- "modules": [
-  "newgrounds",
-  "pornhub",
-  "unknown_site",
-  "youtube"
- ],
- "resolution_sites": [
-  "newgrounds",
-  "pornhub",
-  "youtube"
- ],
- "format_sites": [
-  "newgrounds",
-  "pornhub",
-  "youtube"
- ],
- "youtube_check": [
-  "youtube.com",
-  "youtu.be"
- ],
- "newgrounds_check": ["newgrounds.com"],
- "pornhub_check": ["pornhub.com"],
- "unknown_site_check": null,
- "docs_by_module": {
+{"docs_by_module": {
   "all": [
    "Basic commands, wich work with any url type:\n",
    "+----------------+------------------------+---------------------------------+------------------------------------------------+\n",
@@ -55,49 +31,7 @@
    "+----------------+-----+------------------+---------------------------------+------------------------------------------------+\n",
    "| python mdt.py  |     | --amogus         |                                 | amongus                                        |\n",
    "+----------------+-----+------------------+---------------------------------+------------------------------------------------+\n"
-    ],
-  "newgrounds": [
-   "+-------------------------+",
-   "| newgrounds              |",
-   "+------+------------------+---------------------------+-------------------------------------------------+",
-   "|      |--info            |                           |  return avaliable options for url               |",
-   "|      |-f / -format      |  video_only / audio_only  |  by default download video with audio           |",
-   "| url  |-p / -path        |  /full_path               |  by default locates in script path              |",
-   "|      |-n / name         |  custom_name              |  by default generates from video title          |",
-   "|      |-r / -resolution  |  144p/ 240p/ .../ 2160p   |  by default res opt is best, only for video     |",
-   "+------+------------------+---------------------------+-------------------------------------------------+"
-  ],
-  "pornhub": [
-   "+-------------------------+",
-   "| pornhub                 |",
-   "+------+------------------+---------------------------+-------------------------------------------------+",
-   "|      |--info            |                           |  return avaliable options for url               |",
-   "|      |-f / -format      |  video_only / audio_only  |  by default download video with audio           |",
-   "| url  |-p / -path        |  /full_path               |  by default locates in script path              |",
-   "|      |-n / name         |  custom_name              |  by default generates from video title          |",
-   "|      |-r / -resolution  |  144p/ 240p/ .../ 2160p   |  by default res opt is best, only for video     |",
-   "+------+------------------+---------------------------+-------------------------------------------------+"
-  ],
-  "unknown_site": [
-   "+-------------------------+",
-   "| unknown_site            |",
-   "+------+------------------+---------------------------+-------------------------------------------------+",
-   "|      |--info            |                           |  return avaliable options for url               |",
-   "| url  |-p / -path        |  /full_path               |  by default locates in script path              |",
-   "|      |-n / name         |  custom_name              |  by default generates from video title          |",
-   "+------+------------------+---------------------------+-------------------------------------------------+"
-  ],
-  "youtube": [
-   "+-------------------------+",
-   "| youtube                 |",
-   "+------+------------------+---------------------------+-------------------------------------------------+",
-   "|      |--info            |                           |  return avaliable options for url               |",
-   "|      |-f / -format      |  video_only / audio_only  |  by default download video with audio           |",
-   "| url  |-p / -path        |  /full_path               |  by default locates in script path              |",
-   "|      |-n / name         |  custom_name              |  by default generates from video title          |",
-   "|      |-r / -resolution  |  144p/ 240p/ .../ 2160p   |  by default res opt is best, only for video     |",
-   "+------+------------------+---------------------------+-------------------------------------------------+"
-  ]
+    ]
  },
  "doc_template": {
   "upper_edge": "+-------------------------+",

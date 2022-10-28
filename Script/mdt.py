@@ -148,6 +148,15 @@ def input_processing():
     for site_file in os.scandir(f'{script_dir}{os.sep}modules'):
         if site_file.is_file():
             modules.append(site_file.name[:-3])
+    
+    prjct_dir = Path(os.path.dirname(os.path.abspath(__file__))).parent.absolute()
+    with open(f'{prjct_dir}/Script/default_values.json'.replace('/', os.sep), 'r') as fr:
+        values = json.load(fr)
+        if values["path"] == '':
+            print("First setup, it takes time...")
+            values["path"] = f"{prjct_dir}/downloads"
+        with open(f'{prjct_dir}/Script/default_values.json'.replace('/', os.sep), 'w') as fw:
+            json.dump(values, fw, ensure_ascii=False, indent=1)
 
     with open('modules_info.json', 'r') as fr:
         modules_info = json.load(fr)
