@@ -154,7 +154,7 @@ def input_processing():
         values = json.load(fr)
         if values["path"] == '':
             print("First setup, it takes time...")
-            values["path"] = f"{prjct_dir}/downloads"
+            values["path"] = f"{prjct_dir}{os.sep}downloads"
         with open(f'{prjct_dir}/Script/default_values.json'.replace('/', os.sep), 'w') as fw:
             json.dump(values, fw, ensure_ascii=False, indent=1)
 
