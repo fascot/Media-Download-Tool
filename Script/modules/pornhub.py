@@ -4,7 +4,7 @@ from pornhub_api import PornhubApi
 from pathlib import Path
 from os.path import dirname, abspath
 from sys import stdout
-from functions.name_correct import name_correct
+from .functions.name_correct import name_correct
 import sys
 
 
