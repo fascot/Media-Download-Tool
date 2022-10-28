@@ -159,6 +159,7 @@ def input_processing():
             json.dump(values, fw, ensure_ascii=False, indent=1)
 
     with open('modules_info.json', 'r') as fr:
+        global modules_info
         modules_info = json.load(fr)
         if set(modules_info['modules']) != set(modules):
 
