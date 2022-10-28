@@ -1,0 +1,113 @@
+{
+ "modules": [
+  "newgrounds",
+  "pornhub",
+  "unknown_site",
+  "youtube"
+ ],
+ "resolution_sites": [
+  "newgrounds",
+  "pornhub",
+  "youtube"
+ ],
+ "format_sites": [
+  "newgrounds",
+  "pornhub",
+  "youtube"
+ ],
+ "youtube_check": [
+  "youtube.com",
+  "youtu.be"
+ ],
+ "newgrounds_check": ["newgrounds.com"],
+ "pornhub_check": ["pornhub.com"],
+ "unknown_site_check": null,
+ "docs_by_module": {
+  "all": [
+   "Basic commands, wich work with any url type:\n",
+   "+----------------+------------------------+---------------------------------+------------------------------------------------+\n",
+   "| Tool           | Url | Command          | Argument                        | Description                                    |\n",
+   "+----------------+-----+------------------+---------------------------------+------------------------------------------------+\n",
+   "| python mdt.py  |     | --help           | all | youtube | unknown_site... | Return documentation for module                |\n",
+   "| python mdt.py  | url | --info           |                                 | Return information about page                  |\n",
+   "| python mdt.py  | url | -n | -name       | custom_name                     | Change name of the output media file           |\n",
+   "| python mdt.py  | url | -p | -path       | custom_path                     | Change path of the output media file           |\n",
+   "+----------------+-----+------------------+---------------------------------+------------------------------------------------+\n",
+   "\n",
+   "Option -f work only with ",
+   "newgrounds, pornhub, youtube",
+   " links:\n",
+   "+----------------+-----+------------------+---------------------------------+------------------------------------------------+\n",
+   "| python mdt.py  | url | -f | -format     | video_only | audio_only         | Remove audio or video from output VIDEO file   |\n",
+   "+----------------+-----+------------------+---------------------------------+------------------------------------------------+\n",
+   "\n",
+   "Option -r work only with ",
+   "newgrounds, pornhub, youtube",
+   " links:\n",
+   "+----------------+-----+------------------+---------------------------------+------------------------------------------------+\n",
+   "| python mdt.py  | url | -r | -resolution | 144p | 240p | .... | 2160p      | Change resolution of output VIDEO file         |\n",
+   "+----------------+-----+------------------+---------------------------------+------------------------------------------------+\n",
+   "You can change default download path with `--default_path` option:                                                            \n",
+   "+----------------+-----+------------------+---------------------------------+------------------------------------------------+\n",
+   "| python mdt.py  |     | --default_path   | full_path                       | Change default path                            |\n",
+   "+----------------+-----+------------------+---------------------------------+------------------------------------------------+\n",
+   "Also an amogus animation is supported with `--amogus` option:                                                                 \n",
+   "+----------------+-----+------------------+---------------------------------+------------------------------------------------+\n",
+   "| python mdt.py  |     | --amogus         |                                 | amongus                                        |\n",
+   "+----------------+-----+------------------+---------------------------------+------------------------------------------------+\n"
+    ],
+  "newgrounds": [
+   "+-------------------------+",
+   "| newgrounds              |",
+   "+------+------------------+---------------------------+-------------------------------------------------+",
+   "|      |--info            |                           |  return avaliable options for url               |",
+   "|      |-f / -format      |  video_only / audio_only  |  by default download video with audio           |",
+   "| url  |-p / -path        |  /full_path               |  by default locates in script path              |",
+   "|      |-n / name         |  custom_name              |  by default generates from video title          |",
+   "|      |-r / -resolution  |  144p/ 240p/ .../ 2160p   |  by default res opt is best, only for video     |",
+   "+------+------------------+---------------------------+-------------------------------------------------+"
+  ],
+  "pornhub": [
+   "+-------------------------+",
+   "| pornhub                 |",
+   "+------+------------------+---------------------------+-------------------------------------------------+",
+   "|      |--info            |                           |  return avaliable options for url               |",
+   "|      |-f / -format      |  video_only / audio_only  |  by default download video with audio           |",
+   "| url  |-p / -path        |  /full_path               |  by default locates in script path              |",
+   "|      |-n / name         |  custom_name              |  by default generates from video title          |",
+   "|      |-r / -resolution  |  144p/ 240p/ .../ 2160p   |  by default res opt is best, only for video     |",
+   "+------+------------------+---------------------------+-------------------------------------------------+"
+  ],
+  "unknown_site": [
+   "+-------------------------+",
+   "| unknown_site            |",
+   "+------+------------------+---------------------------+-------------------------------------------------+",
+   "|      |--info            |                           |  return avaliable options for url               |",
+   "| url  |-p / -path        |  /full_path               |  by default locates in script path              |",
+   "|      |-n / name         |  custom_name              |  by default generates from video title          |",
+   "+------+------------------+---------------------------+-------------------------------------------------+"
+  ],
+  "youtube": [
+   "+-------------------------+",
+   "| youtube                 |",
+   "+------+------------------+---------------------------+-------------------------------------------------+",
+   "|      |--info            |                           |  return avaliable options for url               |",
+   "|      |-f / -format      |  video_only / audio_only  |  by default download video with audio           |",
+   "| url  |-p / -path        |  /full_path               |  by default locates in script path              |",
+   "|      |-n / name         |  custom_name              |  by default generates from video title          |",
+   "|      |-r / -resolution  |  144p/ 240p/ .../ 2160p   |  by default res opt is best, only for video     |",
+   "+------+------------------+---------------------------+-------------------------------------------------+"
+  ]
+ },
+ "doc_template": {
+  "upper_edge": "+-------------------------+",
+  "module_header": "",
+  "middle_edge": "+------+------------------+---------------------------+-------------------------------------------------+",
+  "info_opt": "|      |--info            |                           |  return avaliable options for url               |",
+  "form_opt": "|      |-f / -format      |  video_only / audio_only  |  by default download video with audio           |",
+  "path_opt": "| url  |-p / -path        |  /full_path               |  by default locates in script path              |",
+  "name_opt": "|      |-n / name         |  custom_name              |  by default generates from video title          |",
+  "res_opt": "|      |-r / -resolution  |  144p/ 240p/ .../ 2160p   |  by default res opt is best, only for video     |",
+  "lower_edge": "+------+------------------+---------------------------+-------------------------------------------------+"
+ }
+}
