@@ -178,12 +178,3 @@ def pornhub_download(url, opts):
         clear()
         stdout.write("Video download complete!")
         stdout.flush()
-
-
-pornhub_download("https://rt.pornhub.com/playlist/241384191", {
-    'resolution': 'best',
-    'video_only': False,
-    'audio_only': False,
-    'path': None,
-    'name': None
-})
