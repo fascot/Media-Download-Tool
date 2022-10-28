@@ -107,7 +107,7 @@ youtube_download("https://youtube.com/whatch=something", {
 They return module's ability work with `-f` and `-r` options
 It requires for `--help` docs generation
 5. There has to be `mofule_info(url)-> str` function which return some useful information about received url, like avaliable video resolutions and etc.
-6. There has to be `module_check(url)-> bool` function which compares the link with the unique parts of the link related to this module
+6. There has to be `module_check(url)-> list` function which return the unique parts related to this module
 It requires for url type difining 
 
 There is also some optional things:

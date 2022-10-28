@@ -174,7 +174,7 @@ def input_processing():
                 string = f'''
 from modules.{module} import {module}_format_check, {module}_resolution_check, {module}_check
 
-modules_info["{module}_check"] = [{module}_check()]
+modules_info["{module}_check"] = {module}_check()
 
 if {module}_format_check():
     format_sites.append('{module}')
@@ -288,7 +288,7 @@ if {module}_resolution_check():
             modules_info = json.load(f)
             url_type = None
             for module in modules:
-                if modules_info[f"{module}_check"] != [None]:
+                if modules_info[f"{module}_check"] != None:
                     for unique_url_part in modules_info[f"{module}_check"]:
                         if unique_url_part in url:
                             url_type = module

@@ -15,7 +15,7 @@ else:
 
 
 def newgrounds_check():
-    return ("newgrounds.com")
+    return ["newgrounds.com"]
 
 def newgrounds_format_check():
     return True

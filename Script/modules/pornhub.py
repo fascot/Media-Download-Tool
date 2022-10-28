@@ -9,7 +9,7 @@ import sys
 
 
 def pornhub_check():
-    return ("pornhub.com")
+    return ["pornhub.com"]
 
 def pornhub_format_check():
     return True

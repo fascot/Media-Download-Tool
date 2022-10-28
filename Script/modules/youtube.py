@@ -10,7 +10,7 @@ from http.client import IncompleteRead
 
 
 def youtube_check():
-    return ("youtube.com", "youtu.be")
+    return ["youtube.com", "youtu.be"]
 
 def youtube_format_check():
     return True
