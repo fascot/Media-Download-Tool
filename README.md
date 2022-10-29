@@ -105,16 +105,16 @@ youtube_download("https://youtube.com/whatch=something", {
 ```
 4. There has to be `module_format_check()-> bool` and `module_resolution_check()-> bool` functions. <br />
 They return module's ability work with `-f` and `-r` options. <br />
-It requires for `--help` docs generation <br />
+It requires for `--help` docs generation. <br />
 5. There has to be `mofule_info(url)-> str` function which return some useful information about received url, like avaliable video <br /> resolutions and etc. <br />
 6. There has to be `module_check(url)-> list` function which return the unique parts related to this module. <br />
-It requires for url type difining  <br />
+It requires for url type difining. <br />
 
 There is also some optional things:
 1. If you need you can save some data in `./Script/default_values.json`. <br />
-It requires sometimes to save user data like username and password <br />
+It requires sometimes to save user data like username and password. <br />
 2. If you download file from media link, you can use function `download_file(url, path, name, extention)` which animate download process. <br />
-It would be better for user <br />
+It would be better for user. <br />
 Example:
 ```bash
 download_file(
