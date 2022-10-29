@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 from sys import stdout
 
+
 global amoguss
 amoguss = ['''
                       ,▄▄████████▄▄,
@@ -307,8 +308,7 @@ if {module}_resolution_check():
                 elif cmd[i] == '--info':
                     if len(cmd) > 3:
                         print("WARNING: options after --info will be ignored")
-                    print(get_url_info(url, url_type))
-                    sys.exit()
+                    get_url_info(url, url_type)
 
                 elif cmd[i] == '-f' or cmd[i] == '-format':
                     if format_flag:
