@@ -35,7 +35,7 @@ Downloading scripts and libraries Done! <br />
 
 # Usage
 
-By default youtube, pornhub and newgrounds are supported. <br />
+By default youtube and newgrounds are supported. <br />
 
 You can type most of the commands in no particular order <br />
 
