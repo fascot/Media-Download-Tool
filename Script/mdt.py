@@ -123,7 +123,7 @@ from modules import {url_type}
 
 sys.stdout.write({url_type}.{url_type}_info('{url}'))
 sys.stdout.flush()
-sys.exit()
+sleep(10)
 '''
     exec(string)
     sys.exit()
