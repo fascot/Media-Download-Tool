@@ -303,6 +303,7 @@ if {module}_resolution_check():
                 if len(cmd) > 3:
                     print("WARNING: options after --info will be ignored")
                 get_url_info(url, url_type)
+                return 0
 
             for i in range(2, len(cmd)):
 
