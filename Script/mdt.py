@@ -123,7 +123,6 @@ from modules import {url_type}
 
 sys.stdout.write({url_type}.{url_type}_info('{url}'))
 sys.stdout.flush()
-sleep(10)
 '''
     exec(string)
     sys.exit()
@@ -300,17 +299,16 @@ if {module}_resolution_check():
 
         if len(cmd) > 2:
 
+            if cmd[2] == '--info':
+                if len(cmd) > 3:
+                    print("WARNING: options after --info will be ignored")
+                get_url_info(url, url_type)
+
             for i in range(2, len(cmd)):
 
                 if ignore_element:
                     ignore_element = False
                     continue
-
-                elif cmd[i] == '--info':
-                    if len(cmd) > 3:
-                        print("WARNING: options after --info will be ignored")
-                    get_url_info(url, url_type)
-                    sys.exit()
 
                 elif cmd[i] == '-f' or cmd[i] == '-format':
                     if format_flag:
