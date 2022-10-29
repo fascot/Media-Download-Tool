@@ -123,6 +123,7 @@ from modules import {url_type}
 
 sys.stdout.write({url_type}.{url_type}_info('{url}'))
 sys.stdout.flush()
+sys.exit()
 '''
     exec(string)
     sys.exit()
@@ -309,6 +310,7 @@ if {module}_resolution_check():
                     if len(cmd) > 3:
                         print("WARNING: options after --info will be ignored")
                     get_url_info(url, url_type)
+                    sys.exit()
 
                 elif cmd[i] == '-f' or cmd[i] == '-format':
                     if format_flag:
